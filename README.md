@@ -103,7 +103,7 @@
 
 <div align="center">
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Notookk/DolbyMusicX)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Jani-Govind/Govind-Bot)
 
 *Click above to deploy instantly!*
 
