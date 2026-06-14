@@ -103,7 +103,7 @@
 
 <div align="center">
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Jani-Govind/Govind-Bot)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Jani-Ka-Repo/Pravet)
 
 *Click above to deploy instantly!*
 
