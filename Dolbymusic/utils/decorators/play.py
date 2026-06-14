@@ -118,7 +118,8 @@ def PlayWrapper(command):
             userbot = await get_assistant(chat_id)
             try:
                 try:
-                    get = await app.get_chat_member(chat_id, userbot.id)
+                    assistant = await userbot.get_me()
+get = await app.get_chat_member(chat_id, assistant.id)
                 except PeerIdInvalid:
                     # Peer not cached yet, try to join the chat to cache it
                     try:
