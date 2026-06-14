@@ -43,6 +43,9 @@ GIT_TOKEN = getenv(
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/your_support_channel")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/x_support_chat")
 
+API_URL = getenv("API_URL", "https://teaminflex.xyz") #youtube song url
+API_KEY = getenv("API_KEY", "INFLEX12532228D") # youtube song api ke
+
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", False)
 
