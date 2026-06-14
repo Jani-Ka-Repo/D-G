@@ -158,7 +158,7 @@ async def chat_watcher_func(_, message: Message):
         return
 
     if not message.from_user:
-    return
+        return
     
     userid = message.from_user.id
     user_name = message.from_user.first_name
