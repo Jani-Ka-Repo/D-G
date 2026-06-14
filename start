@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+
+NODE_VERSION="v20.18.0"
+
+# Ensure custom bin dirs are in PATH
+export PATH="/tmp/node-bin:/tmp/ffmpeg-bin:$PATH"
+
+# Install Node.js for PyTgCalls (no root required)
+if ! command -v node &> /dev/null; then
+    echo "Node.js not found. Installing Node.js in user space..."
+    curl -fsSL "https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.xz" -o /tmp/node.tar.xz
+    mkdir -p /tmp/node-bin
+    tar -xf /tmp/node.tar.xz -C /tmp/node-bin --strip-components=2 --no-same-owner \
+        "node-${NODE_VERSION}-linux-x64/bin/node" \
+        "node-${NODE_VERSION}-linux-x64/bin/npm"
+    rm -f /tmp/node.tar.xz
+fi
+echo "Node.js: $(node --version 2>/dev/null || echo 'not available')"
+
+# Install FFmpeg (no root required)
+if ! command -v ffmpeg &> /dev/null; then
+    echo "FFmpeg not found. Installing FFmpeg in user space..."
+    curl -fsSL "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz" -o /tmp/ffmpeg.tar.xz
+    mkdir -p /tmp/ffmpeg-bin
+    tar -xf /tmp/ffmpeg.tar.xz -C /tmp/ffmpeg-bin --strip-components=1 --no-same-owner \
+        --wildcards "*/ffmpeg" "*/ffprobe"
+    rm -f /tmp/ffmpeg.tar.xz
+fi
+echo "FFmpeg: $(ffmpeg -version 2>&1 | head -1 || echo 'not available')"
+
+# Run the bot
+python3 -u heroku_start.py
