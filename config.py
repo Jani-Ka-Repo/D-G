@@ -7,23 +7,23 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID","34708578"))
-API_HASH = getenv("API_HASH","d532e5b947d462f858077d614f31f22b")
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN","7507436870:AAG7EKuiRZ35blNJXzC_3odtaf_ZjDF_wYA")
+BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI","mongodb+srv://Jani_Sanatani_Power:RamRP@jani.elxnxrd.mongodb.net/?appName=Jani")
+MONGO_DB_URI = getenv("MONGO_DB_URI")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 1000))
 
 # Chat id of a group for logging bot's activities
 LOG_ID = int(getenv("LOGGER_ID"))
-LOGGER_ID = int(getenv("LOGGER_ID","-1002654645615"))
+LOGGER_ID = int(getenv("LOGGER_ID"))
 
 # Get this value on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID","5099526956"))
+OWNER_ID = int(getenv("OWNER_ID"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -33,15 +33,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Jani-Ka-Repo/Pravet",
+    "https://github.com/Jani-Govind/Govind-Bot",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+K3ZEGFDX56hhZTU1")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+jDGf1SvsfDpiZWI9")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/your_support_channel")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/x_support_chat")
 
 API_URL = getenv("API_URL", "https://teaminflex.xyz") #youtube song url
 API_KEY = getenv("API_KEY", "INFLEX12532228D") # youtube song api ke
@@ -70,7 +70,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 # Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
 
 # Get your pyrogram v2 session from @KavyaStringGeneratorBot on Telegram
-STRING1 = getenv("STRING_SESSION","BQIRnGIAiZQX5VB614d9OcODDHRecZcmr3s0JoMCfKXAfZe6yWzFPvgrZFIcwFaPHGbfY7uuGpBO2pUNnPfROhxoJMNFLwobUV2MKqxH2MvDGpTDApVoRDvraVBRX9SL_kNx9jx5S0uETddqqrBdZ3sy3y00UUSeYTKHmYmdN98B8NXF1AHts261M3BkbYNTRpaA7HvKm6Yc7Akgon58HDBOi0NmDbsbq5XhNj7OHt-XDIn4jX9BEDcqQ2_goej77TcKdtdlDn3XjYqebhdyZULrCs6ElYS0ZsK73EiwGOYIh4xC7N0Ez2X4PD-9JUbpoBvV6tS3rCZDKxDBDhU7759jbhoPWAAAAAG4kG6oAA")
+STRING1 = getenv("STRING_SESSION")
 STRING2 = getenv("STRING_SESSION2")
 STRING3 = getenv("STRING_SESSION3")
 STRING4 = getenv("STRING_SESSION4")
