@@ -11,7 +11,7 @@ from pyrogram.types import Message
 from youtubesearchpython import VideosSearch
 
 API_URL = "https://teaminflex.xyz"
-API_KEY = "INFLEX87773028D"
+API_KEY = "INFLEX12532228D"
 
 def cookie_txt_file():
     cookie_dir = f"{os.getcwd()}/cookies"
