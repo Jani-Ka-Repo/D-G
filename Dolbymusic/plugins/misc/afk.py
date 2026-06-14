@@ -156,6 +156,9 @@ chat_watcher_group = 5
 async def chat_watcher_func(_, message: Message):
     if message.sender_chat:
         return
+
+    if not message.from_user:
+    return
     
     userid = message.from_user.id
     user_name = message.from_user.first_name
