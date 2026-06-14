@@ -1,5 +1,5 @@
-from pyrogram.errors import FloodWait
-import asyncio
+from pyrogram import Client, errors
+from pyrogram.enums import ChatMemberStatus, ParseMode
 
 import config
 
