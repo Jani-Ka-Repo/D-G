@@ -592,38 +592,24 @@ class Call(PyTgCalls):
             await self.five.start()
 
     async def decorators(self):
-        @self.one.on_update(
-                fl.chat_update(
-                    ChatUpdate.Status.KICKED | 
-                    ChatUpdate.Status.LEFT_GROUP | 
-                    ChatUpdate.Status.CLOSED_VOICE_CHAT
-                    ))
-        @self.two.on_update(
-                fl.chat_update(
-                    ChatUpdate.Status.KICKED | 
-                    ChatUpdate.Status.LEFT_GROUP | 
-                    ChatUpdate.Status.CLOSED_VOICE_CHAT
-                    ))
-        @self.three.on_update(
-                fl.chat_update(
-                    ChatUpdate.Status.KICKED | 
-                    ChatUpdate.Status.LEFT_GROUP | 
-                    ChatUpdate.Status.CLOSED_VOICE_CHAT
-                    ))
-        @self.four.on_update(
-                fl.chat_update(
-                    ChatUpdate.Status.KICKED | 
-                    ChatUpdate.Status.LEFT_GROUP | 
-                    ChatUpdate.Status.CLOSED_VOICE_CHAT
-                    ))
-        @self.five.on_update(
-                fl.chat_update(
-                    ChatUpdate.Status.KICKED | 
-                    ChatUpdate.Status.LEFT_GROUP | 
-                    ChatUpdate.Status.CLOSED_VOICE_CHAT
-                    ))
-        async def stream_services_handler(client, update: Update):
-            await self.stop_stream(update.chat_id)
+               
+        @self.one.on_kicked()
+        @self.one.on_closed_voice_chat()
+        @self.one.on_left()
+        @self.two.on_kicked()
+        @self.two.on_closed_voice_chat()
+        @self.two.on_left()
+        @self.three.on_kicked()
+        @self.three.on_closed_voice_chat()
+        @self.three.on_left()
+        @self.four.on_kicked()
+        @self.four.on_closed_voice_chat()
+        @self.four.on_left()
+        @self.five.on_kicked()
+        @self.five.on_closed_voice_chat()
+        @self.five.on_left()
+        async def stream_services_handler(client, chat_id: int):
+            await self.stop_stream(chat_id)
 
         @self.one.on_update(fl.stream_end())
         @self.two.on_update(fl.stream_end())
